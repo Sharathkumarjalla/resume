@@ -1,1 +1,139 @@
-hello
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jalla Sharath Kumar - Portfolio</title>
+    <link rel="stylesheet" href='style.css' >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+</head>
+<body>
+    <video autoplay loop muted class="bg-video">
+        <source src='earth.mov' type="video/mp4">
+    </video>
+    
+    <div class="navbar">
+        <a href="#about" data-text="About"><i class="fas fa-user"></i></a>
+        <a href="#skills" data-text="Skills"><i class="fas fa-cogs"></i></a>
+        <a href="#education" data-text="Education"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#projects" data-text="Projects"><i class="fas fa-folder"></i></a>
+        <a href="#certifications" data-text="Certifications"><i class="fas fa-certificate"></i></a>
+        <a href="#experience" data-text="Experience"><i class="fas fa-briefcase"></i></a>
+        <a href="#contact" data-text="Contact"><i class="fas fa-phone"></i></a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let navbar = document.querySelector(".navbar");
+    
+            // Show navbar for 2 seconds on page load
+            navbar.classList.add("visible");
+            setTimeout(() => {
+                navbar.classList.remove("visible");
+            }, 2000); // 2 seconds
+    
+            document.addEventListener("mousemove", function (event) {
+                // Show navbar when cursor is near the top (less than 50px from top)
+                if (event.clientY < 50) {
+                    navbar.classList.add("visible");
+                } else {
+                    navbar.classList.remove("visible");
+                }
+            });
+            
+            
+        });
+    </script>
+    
+    
+    
+    
+    
+    <div class="content">
+        <h1>Jalla Sharath Kumar</h1>
+        <p>Driven MCA graduate with expertise in AI, ML, and Software Development.</p>
+    </div>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Master of Computer Applications graduate passionate about AI, ML, and emerging technologies. Proficient in Python, Django, OpenCV, and database management, with a strong foundation in problem-solving and teamwork.</p>
+
+        
+
+    </section>
+    <section id="PROFILE">
+        <img src="sharathpic.jpg" alt="Circle Image" class="circle-img">
+    </section>
+    
+    <style>
+      #PROFILE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh; /* Adjust if needed */
+      }
+    
+      .circle-img {
+        width: 400px;
+        height: 400px;
+        border-radius: 500%;
+        object-fit: cover;
+      }
+    </style>
+    
+    
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <p><strong>Programming:</strong> Python, C++, HTML, SQL</p>
+        <p><strong>Frameworks & Tools:</strong> Django, OpenCV</p>
+        <p><strong>Operating Systems:</strong> Windows, macOS, Linux</p>
+        <p><strong>Databases:</strong> SQL, SQLite</p>
+        <p><strong>AI/ML:</strong> Machine Learning, Deep Learning, Computer Vision</p>
+        <p><strong>Soft Skills:</strong> Teamwork, Communication, Problem Solving, Time Management</p>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>MCA</strong> - A.M.C Institutions (2022 - 2024) | GPA: 7.4</p>
+        <p><strong>B.Sc in Computers</strong> - Shri Gnanambica Degree College (2019 - 2022) | GPA: 8.7</p>
+        <p><strong>Higher Secondary</strong> - A.P. Residential Jr College (2017 - 2019) | GPA: 9.65</p>
+        <p><strong>SSC</strong> - A.P. Model School (2016 - 2017) | GPA: 8.0</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <p><strong>Color Detection using Python:</strong> Developed a system for real-time color detection in images and videos
+            using Python’s OpenCV library, enabling efficient image processing and color identification.</p>
+        <p><strong>Library Management System:</strong>  Created a web-based application to manage and track the borrowing and
+            returning of books by students. The system streamlines library operations and improves resource management with a
+            user-friendly interface.</p>
+        <p><strong>Deepfake Video Detection:</strong> Built an AI-based system to identify manipulated video content using deep learning
+            techniques, ensuring media integrity and preventing the spread of misinformation.</p>
+    </section>
+    
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <p>Python Certification - Hope Foundation (Sep 2024)</p>
+        <p>Python 101 for Data Science - Cognitive Class (Jul 2024)</p>
+        <p>Bioinformatics Tools - MakeIntern IIT Kharagpur (Mar 2021)</p>
+        <p>DCA - MERENA Institute of Graphics (Oct 2018)</p>
+        <p>SAMBAV - Shri Gnanambica Degree College (Oct 2020)</p>
+    </section>
+    
+    <section id="experience">
+        <h2>Internship Experience</h2>
+        <p><strong>Study Comrade (Aug 2022 - Nov 2022):</strong> Assisted in web-based projects and educational tool development.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> 7032394436</p>
+        <p><strong>Email:</strong> <a href="mailto:sharathkmr171@gmail.com">sharathkmr171@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jalla-sharath-kumar-04b301215">Profile</a></p>
+    </section>
+</body>
+</html>
