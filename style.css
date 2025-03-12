@@ -1,0 +1,207 @@
+/* Apply the Anurati font only to headings and name */
+@font-face {
+    font-family: 'Anurati';
+    src: url('Anurati.otf') format('opentype');
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* Background video */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navigation bar */
+.navbar {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+}
+
+.navbar.visible {
+    top: 1px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s, color 0.3s;
+    position: relative;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+    color: rgb(126, 10, 91);
+}
+
+.navbar a:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -30px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Centered content */
+.content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    white-space: nowrap;
+}
+
+.content h1 {
+    font-family: 'Anurati', sans-serif;
+    font-size: 5.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+/* Sections */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 180px 5%;
+    min-height: auto;
+}
+
+section h2 {
+    font-family: 'Anurati', sans-serif;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-bottom: 80px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    letter-spacing: 6px;
+}
+
+section div {
+    text-align: right;
+    opacity: 0;
+    animation: fadeInList 2s ease-in-out forwards;
+    font-size: 2.5em;
+    line-height: 2;
+    width: 100%;
+    margin-bottom: 80px;
+    word-wrap: break-word;
+}
+
+section div ul {
+    list-style-type: disc;
+    padding-right: 0;
+    text-align: right;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 280px 10%;
+}
+
+#about h2, #about div {
+    text-align: center;
+    align-self: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content h1 {
+        font-size: 4em;
+    }
+    section {
+        padding: 100px 5%;
+        align-items: center;
+    }
+    section h2 {
+        font-size: 2.5em;
+        text-align: center;
+        align-self: center;
+    }
+    section div {
+        font-size: 1.8em;
+        text-align: center;
+    }
+    .navbar {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 3em;
+    }
+    section h2 {
+        font-size: 2em;
+    }
+    section div {
+        font-size: 1.5em;
+    }
+    .navbar {
+        flex-direction: row;
+        gap: 8px;
+    }
+    .navbar a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2.5em;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    section div {
+        font-size: 1.2em;
+    }
+    .navbar {
+        gap: 5px;
+    }
+    .navbar a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8em;
+    }
+}
